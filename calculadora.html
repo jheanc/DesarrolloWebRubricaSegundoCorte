@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="calculadora.css">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+</head>
+<body>
+    <div class="calculator animated bounceInUp">
+        <form name="calculadora">
+            <input class="pantalla" type="text" id="pantalla" name="print" value="" autocomplete="off" readonly>
+        <div class="controlls">
+            <input type="reset" class="col-2" class="operator-out" value="AC" onclick="eliminarUltimo()">
+            <input type="button" class="col-2" class="operator-out" value="&larr;" onclick="eliminarUltimo()">
+            
+            <input type="button" class="number" value="7" onclick="document.getElementById('pantalla').value+='7'">
+            <input type="button" class="number" value="8" onclick="document.getElementById('pantalla').value+='8'">
+            <input type="button" class="number" value="9" onclick="document.getElementById('pantalla').value+='9'">
+            <input type="button" class="operator" value="+" onclick="document.getElementById('pantalla').value+='+'">
+            
+            <input type="button" class="number" value="4" onclick="document.getElementById('pantalla').value+='4'">
+            <input type="button" class="number" value="5" onclick="document.getElementById('pantalla').value+='5'">
+            <input type="button" class="number" value="6" onclick="document.getElementById('pantalla').value+='6'">
+            <input type="button" class="operator" value="-" onclick="document.getElementById('pantalla').value+='-'">
+            
+            <input type="button" class="number" value="1" onclick="document.getElementById('pantalla').value+='1'">
+            <input type="button" class="number" value="2" onclick="document.getElementById('pantalla').value+='2'">
+            <input type="button" class="number" value="3" onclick="document.getElementById('pantalla').value+='3'">
+            <input type="button" class="operator" value="x" onclick="document.getElementById('pantalla').value+='*'">
+            
+            <input type="button" class="result" value="=" onclick="calc()">
+            <input type="button" class="number" value="0" onclick="document.getElementById('pantalla').value+='0'">
+            <input type="button" class="number" value="." onclick="validarPunto()">
+            <input type="button" class="operator" value="%" onclick="document.getElementById('pantalla').value+='/'">
+        </div>
+    </div>
+    <div class="hist">
+        <ul id="historial">
+        </ul>
+        <input type="reset" class="col-2 animated bounceInUp" class="operator-out" value="Limpiar Historial" onclick="limpiarHistorial()">
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
